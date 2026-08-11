@@ -1,0 +1,1035 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap');
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================
+   VARIABLES
+========================================= */
+
+:root {
+    --teal: #006b68;
+    --teal-dark: #004c4b;
+
+    --orange: #ef8c0c;
+    --gold: #c99a2e;
+
+    --cream: #fbfaf5;
+
+    --ink: #102f31;
+    --muted: #647576;
+
+    --white: #ffffff;
+    --line: #e4e8e2;
+
+    --shadow:
+        0 24px 70px rgba(16, 47, 49, .12);
+}
+
+
+/* =========================================
+   HTML
+========================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+    min-height: 100vh;
+
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    color: var(--ink);
+
+    background:
+        radial-gradient(
+            circle at 8% 8%,
+            rgba(0, 107, 104, .08),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 92% 20%,
+            rgba(239, 140, 12, .08),
+            transparent 23%
+        ),
+
+        var(--cream);
+
+    line-height: 1.8;
+
+    padding:
+        0
+        20px
+        80px;
+
+    position: relative;
+
+    transition:
+        background .3s ease,
+        color .3s ease;
+}
+
+
+/* =========================================
+   BACKGROUND DECORATION
+========================================= */
+
+body::before,
+body::after {
+    content: "";
+
+    position: fixed;
+
+    width: 220px;
+    height: 220px;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    z-index: -1;
+
+    filter: blur(2px);
+}
+
+body::before {
+    left: -110px;
+    bottom: 8%;
+
+    background:
+        rgba(0, 107, 104, .07);
+}
+
+body::after {
+    right: -100px;
+    top: 25%;
+
+    background:
+        rgba(239, 140, 12, .06);
+}
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.back-link {
+    position: fixed;
+
+    top: 18px;
+    left: 20px;
+
+    z-index: 20;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding:
+        9px
+        15px;
+
+    border-radius: 999px;
+
+    color: var(--teal);
+
+    background:
+        rgba(255, 255, 255, .88);
+
+    border:
+        1px solid var(--line);
+
+    box-shadow:
+        0 8px 25px
+        rgba(16, 47, 49, .08);
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    backdrop-filter: blur(12px);
+
+    transition:
+        .25s ease;
+}
+
+.back-link:hover {
+    transform:
+        translateY(-2px);
+
+    background:
+        var(--teal);
+
+    color:
+        #ffffff;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+main {
+    width:
+        min(920px, 100%);
+
+    margin:
+        70px auto 0;
+
+    position: relative;
+}
+
+
+/* =========================================
+   ARTICLE LABEL
+========================================= */
+
+.article-label {
+    width: max-content;
+
+    margin:
+        0 auto
+        12px;
+
+    padding:
+        6px
+        14px;
+
+    border-radius:
+        999px;
+
+    color:
+        var(--orange);
+
+    background:
+        rgba(239, 140, 12, .10);
+
+    border:
+        1px solid
+        rgba(239, 140, 12, .18);
+
+    font-size:
+        10px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .18em;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+h1 {
+    position: relative;
+
+    margin:
+        0 auto
+        16px;
+
+    max-width:
+        850px;
+
+    padding:
+        35px
+        35px
+        30px;
+
+    text-align:
+        center;
+
+    font-family:
+        Amiri,
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(34px, 5vw, 58px);
+
+    line-height:
+        1.35;
+
+    font-weight:
+        700;
+
+    color:
+        var(--teal);
+
+    background:
+        rgba(255, 255, 255, .82);
+
+    border:
+        1px solid
+        rgba(201, 154, 46, .25);
+
+    border-radius:
+        28px;
+
+    box-shadow:
+        var(--shadow);
+
+    backdrop-filter:
+        blur(12px);
+}
+
+
+/* TITLE DECORATION */
+
+h1::after {
+    content: "";
+
+    display: block;
+
+    width:
+        90px;
+
+    height:
+        2px;
+
+    margin:
+        20px auto 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--gold),
+            transparent
+        );
+}
+
+
+/* =========================================
+   ARTICLE META
+========================================= */
+
+.article-meta {
+    width:
+        max-content;
+
+    max-width:
+        100%;
+
+    margin:
+        0 auto
+        18px;
+
+    padding:
+        7px
+        16px;
+
+    color:
+        var(--teal-dark);
+
+    background:
+        rgba(0, 107, 104, .07);
+
+    border:
+        1px solid
+        rgba(0, 107, 104, .12);
+
+    border-radius:
+        999px;
+
+    font-size:
+        12px;
+
+    font-weight:
+        700;
+
+    text-align:
+        center;
+}
+
+
+/* =========================================
+   ARTICLE
+========================================= */
+
+article {
+    width:
+        100%;
+}
+
+
+/* =========================================
+   PARAGRAPH CARD
+========================================= */
+
+article p {
+    position:
+        relative;
+
+    margin:
+        0 auto
+        24px;
+
+    padding:
+        28px
+        32px;
+
+    max-width:
+        850px;
+
+    background:
+        rgba(255, 255, 255, .92);
+
+    border:
+        1px solid
+        var(--line);
+
+    border-radius:
+        20px;
+
+    box-shadow:
+        0 12px 38px
+        rgba(16, 47, 49, .055);
+
+    overflow:
+        hidden;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease,
+        opacity .3s ease;
+}
+
+
+/* LEFT ACCENT */
+
+article p::before {
+    content: "";
+
+    position:
+        absolute;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    width:
+        4px;
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--teal),
+            var(--gold)
+        );
+}
+
+
+/* HOVER */
+
+article p:hover {
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 18px 45px
+        rgba(16, 47, 49, .09);
+
+    border-color:
+        rgba(0, 107, 104, .22);
+}
+
+
+/* =========================================
+   ALTERNATING TOP BORDER
+========================================= */
+
+article p:nth-of-type(3n + 1) {
+    border-top:
+        3px solid
+        var(--orange);
+}
+
+article p:nth-of-type(3n + 2) {
+    border-top:
+        3px solid
+        var(--teal);
+}
+
+article p:nth-of-type(3n) {
+    border-top:
+        3px solid
+        var(--gold);
+}
+
+
+/* =========================================
+   ARABIC TEXT
+========================================= */
+
+.arabic-text {
+    display:
+        block;
+
+    margin-bottom:
+        18px;
+
+    font-family:
+        Amiri,
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        21px;
+
+    line-height:
+        2.15;
+
+    direction:
+        rtl;
+
+    text-align:
+        right;
+
+    color:
+        var(--ink);
+
+    transition:
+        font-size .2s ease;
+}
+
+
+/* =========================================
+   INLINE ARABIC
+========================================= */
+
+.arabic-inline {
+    display:
+        inline-block;
+
+    font-family:
+        Amiri,
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    direction:
+        rtl;
+
+    font-size:
+        1.15em;
+
+    line-height:
+        1.8;
+
+    color:
+        var(--teal);
+
+    margin:
+        0 3px;
+}
+
+
+/* =========================================
+   SUB INTRO
+========================================= */
+
+.sub-intro {
+    margin:
+        18px 0 4px;
+
+    font-weight:
+        700;
+
+    color:
+        var(--teal-dark);
+}
+
+
+/* =========================================
+   LIST
+========================================= */
+
+article ul {
+    margin:
+        16px 0 8px 24px;
+
+    padding-left:
+        18px;
+}
+
+article li {
+    margin:
+        9px 0;
+}
+
+
+/* =========================================
+   ARTICLE SOURCE
+========================================= */
+
+.article-source {
+    max-width:
+        850px;
+
+    margin:
+        32px auto 0;
+
+    padding:
+        20px
+        24px;
+
+    border-radius:
+        16px;
+
+    background:
+        rgba(0, 107, 104, .06);
+
+    border:
+        1px solid
+        rgba(0, 107, 104, .13);
+
+    color:
+        var(--muted);
+
+    font-size:
+        13px;
+
+    text-align:
+        center;
+}
+
+
+/* =========================================
+   READING TOOLS
+========================================= */
+
+.reading-tools {
+    position:
+        fixed;
+
+    right:
+        20px;
+
+    bottom:
+        20px;
+
+    z-index:
+        30;
+
+    display:
+        flex;
+
+    gap:
+        7px;
+
+    padding:
+        8px;
+
+    border:
+        1px solid
+        var(--line);
+
+    border-radius:
+        18px;
+
+    background:
+        rgba(255, 255, 255, .92);
+
+    box-shadow:
+        0 12px 35px
+        rgba(16, 47, 49, .13);
+
+    backdrop-filter:
+        blur(12px);
+}
+
+
+/* =========================================
+   TOOL BUTTON
+========================================= */
+
+.reading-tools button {
+    width:
+        38px;
+
+    height:
+        38px;
+
+    border:
+        0;
+
+    border-radius:
+        11px;
+
+    background:
+        rgba(0, 107, 104, .08);
+
+    color:
+        var(--teal);
+
+    cursor:
+        pointer;
+
+    font-weight:
+        800;
+
+    transition:
+        .2s ease;
+}
+
+.reading-tools button:hover {
+    background:
+        var(--teal);
+
+    color:
+        #ffffff;
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================================
+   READING PROGRESS
+========================================= */
+
+#reading-progress {
+    position:
+        fixed;
+
+    top:
+        0;
+
+    left:
+        0;
+
+    width:
+        0%;
+
+    height:
+        4px;
+
+    z-index:
+        100;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--teal),
+            var(--gold),
+            var(--orange)
+        );
+}
+
+
+/* =========================================
+   FOCUS MODE
+========================================= */
+
+body.focus-mode article p:not(.reading-now) {
+    opacity:
+        .38;
+}
+
+body.focus-mode .reading-now {
+    opacity:
+        1;
+
+    box-shadow:
+        0 20px 55px
+        rgba(0, 107, 104, .16);
+
+    border-color:
+        var(--teal);
+}
+
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+body.dark-mode {
+    --cream:
+        #0d1c1d;
+
+    --ink:
+        #edf5f1;
+
+    --muted:
+        #a8b9b7;
+
+    --white:
+        #132526;
+
+    --line:
+        #294142;
+
+    background:
+        radial-gradient(
+            circle at 8% 8%,
+            rgba(0, 107, 104, .16),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 92% 20%,
+            rgba(239, 140, 12, .10),
+            transparent 23%
+        ),
+
+        var(--cream);
+}
+
+
+/* DARK TITLE */
+
+body.dark-mode h1 {
+    background:
+        rgba(19, 37, 38, .94);
+}
+
+
+/* DARK ARTICLE */
+
+body.dark-mode article p {
+    background:
+        rgba(19, 37, 38, .94);
+}
+
+
+/* DARK BACK BUTTON */
+
+body.dark-mode .back-link {
+    background:
+        rgba(19, 37, 38, .94);
+}
+
+
+/* DARK TOOLS */
+
+body.dark-mode .reading-tools {
+    background:
+        rgba(19, 37, 38, .94);
+}
+
+
+/* DARK META */
+
+body.dark-mode .article-meta {
+    color:
+        #b8c7c5;
+
+    background:
+        rgba(0, 107, 104, .16);
+}
+
+
+/* DARK SOURCE */
+
+body.dark-mode .article-source {
+    background:
+        rgba(0, 107, 104, .13);
+}
+
+
+/* =========================================
+   DESKTOP
+========================================= */
+
+@media (min-width: 900px) {
+
+    article p {
+        padding:
+            32px
+            42px;
+    }
+
+}
+
+
+/* =========================================
+   TABLET / MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    body {
+        padding:
+            0
+            14px
+            55px;
+    }
+
+    .back-link {
+        top:
+            12px;
+
+        left:
+            12px;
+
+        font-size:
+            11px;
+    }
+
+    main {
+        margin-top:
+            75px;
+    }
+
+    h1 {
+        font-size:
+            36px;
+
+        padding:
+            28px
+            20px
+            24px;
+
+        border-radius:
+            22px;
+    }
+
+    article p {
+        padding:
+            23px
+            22px
+            25px;
+
+        font-size:
+            18px;
+
+        border-radius:
+            17px;
+
+        margin-bottom:
+            16px;
+    }
+
+    .arabic-text {
+        font-size:
+            19px;
+
+        line-height:
+            2;
+    }
+
+    .reading-tools {
+        right:
+            12px;
+
+        bottom:
+            12px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    body {
+        padding:
+            0
+            10px
+            45px;
+    }
+
+    main {
+        margin-top:
+            65px;
+    }
+
+    h1 {
+        font-size:
+            30px;
+
+        line-height:
+            1.35;
+
+        padding:
+            24px
+            15px
+            20px;
+
+        border-radius:
+            18px;
+    }
+
+    h1::after {
+        width:
+            65px;
+
+        margin-top:
+            14px;
+    }
+
+    .article-meta {
+        font-size:
+            10px;
+
+        padding:
+            6px
+            12px;
+    }
+
+    article p {
+        padding:
+            19px
+            17px
+            21px;
+
+        border-radius:
+            15px;
+    }
+
+    .arabic-text {
+        font-size:
+            17px;
+
+        line-height:
+            2;
+    }
+
+    .arabic-inline {
+        font-size:
+            1.1em;
+    }
+
+    .reading-tools button {
+        width:
+            34px;
+
+        height:
+            34px;
+    }
+
+}
