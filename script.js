@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "Pembahasan tentang “sebaik-baik bid'ah dan seburuk-buruk bid'ah”, dengan materi Arab dan terjemahan Indonesia.",
 
       body:
-        "Pembahasan ini mengangkat tema bid'ah dan cara memahami hadis-hadis yang berkaitan dengannya. Materi artikel memuat teks Arab dan terjemahan Indonesia yang dapat dibaca secara lengkap pada halaman artikel.",
+        "Pembahasan ini mengangkat tema bid'ah dan cara memahami hadis-hadis yang berkaitan dengannya. Materi memuat matan kitab mafahim karya syekh alawi al-maliki al-hasani beserta terjemahan.",
 
       link:
         "ni-matul-bidah.html"
@@ -35,10 +35,10 @@ document.addEventListener("DOMContentLoaded", () => {
       date: "Artikel 02",
 
       excerpt:
-        "Halaman artikel Sibabul Muslim yang sudah disiapkan untuk Anda isi dan kembangkan ke depannya.",
+        "Halaman artikel Sibabul Muslim fusuqun wa qitaluhu kufrun.",
 
       body:
-        "Artikel Sibabul Muslim menjadi bagian dari kumpulan tulisan ILMA. Isi lengkap dapat ditambahkan kemudian tanpa perlu mengubah struktur utama website.",
+        "Artikel Sibabul Muslim berisi matan dari kitab mafahim.",
 
       link:
         "sibabul-muslim.html"
