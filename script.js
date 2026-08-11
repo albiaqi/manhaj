@@ -54,10 +54,10 @@ document.addEventListener("DOMContentLoaded", () => {
         "Pembahasan tentang kehati-hatian dalam persoalan takfir dan pentingnya menyampaikan ilmu dengan penuh tanggung jawab.",
 
       body:
-        "Halaman ini disiapkan untuk materi Larangan Mengkafirkan. Karena pembahasan takfir merupakan perkara yang serius, materi sebaiknya dilengkapi dalil, rujukan ulama, dan verifikasi sebelum dipublikasikan.",
+        "Halaman ini berisi bab mengenai larangan keras menghukumi kafir.",
 
       link:
-        "larangan-mengkafirkan.html"
+        "peringatan-mengkafirkan.html"
     }
 
   ];
