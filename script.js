@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "Pembahasan tentang kehati-hatian dalam persoalan takfir dan pentingnya menyampaikan ilmu dengan penuh tanggung jawab.",
 
       body:
-        "Halaman ini berisi bab mengenai larangan keras menghukumi kafir.",
+        "Halaman ini berisi bab mengenai larangan keras terburu-buru dalam menghukumi kafir.",
 
       link:
         "peringatan-mengkafirkan.html"
